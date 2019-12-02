@@ -1,0 +1,40 @@
+<odoo>
+  <data>
+    <record model="ir.actions.act_window" id="internet_dirigido.action_oferta">
+      <field name="name">Ofertas</field>
+      <field name="res_model">internet_dirigido.oferta</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.ui.view" id="internet_dirigido.oferta_form">
+      <field name="name">internet_dirigido.oferta.form</field>
+      <field name="model">internet_dirigido.oferta</field>
+      <field name="arch" type="xml">
+        <form string="Oferta">
+          <sheet>
+            <group>
+              <field name="time"/>
+              <field name="utime"/>
+              <field name="precio"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="internet_dirigido.oferta_tree">
+      <field name="name">internet_dirigido.oferta.tree</field>
+      <field name="model">internet_dirigido.oferta</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="tiempo"/>
+          <field name="precio"/>
+        </tree>
+      </field>
+    </record>
+
+    <menuitem name="Ofertas" id="internet_dirigido.submenu_oferta" parent="internet_dirigido.menu_root"
+              action="internet_dirigido.action_oferta"/>
+  </data>
+</odoo>

@@ -1,0 +1,73 @@
+<odoo>
+  <data>
+    <record model="ir.actions.act_window" id="internet_dirigido.action_cliente">
+      <field name="name">Clientes</field>
+      <field name="res_model">internet_dirigido.cliente</field>
+      <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+    <record model="ir.ui.view" id="internet_dirigido.cliente_kanban">
+      <field name="name">internet_dirigido.cliente.kanban</field>
+      <field name="model">internet_dirigido.cliente</field>
+      <field name="arch" type="xml">
+        <kanban>
+          <templates>
+            <t t-name="kanban-box">
+              <div t-attf-class="oe_kanban_global_click">
+                <div class="o_dropdown_kanban dropdown" tabindex="-1">
+                  <a class="dropdown-toggle o-no-caret btn" data-toggle="dropdown" href="#" role="button" aria-label="Opciones" title="Opciones">
+                    <span class="fa fa-ellipsis-v"/>
+                  </a>
+                  <div class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <a type="delete" role="menuitem" class="dropdown-item">Borrar</a>
+                  </div>
+                </div>
+                <img src="/internet_dirigido/static/user.png" class="oe_module_icon" alt="Avatar"/>
+                <div class="oe_module_desc">
+                  <h4 class="o_kanban_record_title">
+                    <strong><field name="name"/></strong>
+                  </h4>
+                  <div>
+                    <span class="fa rounded-circle fa-laptop"></span> IP: <field name="ip"/>
+                  </div>
+                  <div>
+                    <span class="fa rounded-circle fa-money"></span> Debe: <field name="debe"/>
+                  </div>
+                </div>
+              </div>
+            </t>
+          </templates>
+        </kanban>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="internet_dirigido.cliente_form">
+      <field name="name">internet_dirigido.cliente.form</field>
+      <field name="model">internet_dirigido.cliente</field>
+      <field name="arch" type="xml">
+        <form string="Provider">
+          <sheet>
+            <group>
+              <field name="name"/>
+              <field name="ip"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="internet_dirigido.cliente_tree">
+      <field name="name">internet_dirigido.cliente.tree</field>
+      <field name="model">internet_dirigido.cliente</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="ip"/>
+        </tree>
+      </field>
+    </record>
+
+    <menuitem name="Clientes" id="internet_dirigido.menu_cliente" parent="internet_dirigido.menu_root"
+              action="internet_dirigido.action_cliente"/>
+  </data>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+  <record model="internet_dirigido.estado" id="stage_1">
+    <field name="name">No pagado</field>
+    <field name="sequence">1</field>
+  </record>
+
+  <record model="internet_dirigido.estado" id="stage_2">
+    <field name="name">Pagado</field>
+    <field name="sequence">2</field>
+  </record>
+</odoo>

@@ -1,0 +1,6 @@
+<odoo>
+  <data>
+    <menuitem name="Internet Dirigido" id="internet_dirigido.menu_root" sequence="1" web_icon="internet_dirigido,static/description/icon.png" />
+    <menuitem name="Internet Dirigido" id="internet_dirigido.submenu" parent="internet_dirigido.menu_root"/>
+  </data>
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_internet_dirigido_oferta,internet_dirigido.oferta,model_internet_dirigido_oferta,,1,1,1,1
+access_internet_dirigido_cliente,internet_dirigido.cliente,model_internet_dirigido_cliente,,1,1,1,1
+access_internet_dirigido_conexion,internet_dirigido.conexion,model_internet_dirigido_conexion,,1,1,1,1
+access_internet_dirigido_estado,internet_dirigido.estado,model_internet_dirigido_estado,,1,1,0,0
